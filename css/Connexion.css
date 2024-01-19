@@ -1,0 +1,48 @@
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 88%;
+}
+
+section{
+    background-color:rgb(220, 207, 207);
+    border-radius: 5px;
+    max-width: 50%;
+    max-height: 60%;
+    margin-left: 25%;
+    margin-top: 8%;
+    flex-grow: 1;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    text-align: center;
+    color: rgb(3, 3, 3);
+}
+
+#info{
+    flex-grow: 1;
+    flex-basis: 100%;
+    min-height: 50%;
+    padding-top: 5%;
+}
+
+#infos{
+    max-width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    
+}
+
+#valid{
+    width: 60%;
+    height: 15%;
+    margin-left: 20%;
+}

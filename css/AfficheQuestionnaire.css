@@ -1,0 +1,30 @@
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 88%;
+}
+
+
+
+#questionnaire {
+    border-radius: 10px;
+    margin: 5em;
+}
+
+#other{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
