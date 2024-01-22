@@ -1,7 +1,9 @@
 <?php
-
+namespace files\BD;
+use \PDO;
+use \PDOException;
 // Inclure le fichier de connexion à la base de données
-require("connexionBD.php");
+require("../BD/connexionBD.php");
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

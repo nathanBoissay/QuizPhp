@@ -1,15 +1,21 @@
+<?php
+    namespace files\BD;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <title>Création d'un Questionnaire</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 </head>
 <body>
 
 <?php
 
-require("connexionBD.php");
+require("../BD/connexionBD.php");
 
 $connexion = connect_bd();
 
@@ -45,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 $stmtSelect->execute();
 
                 foreach ($stmtSelect as $row) {
-                  header("Refresh:1; /addQuestions.php?IDQUESTIONNAIRE=".$row["IDQUESTIONNAIRE"]."&NOMQUESTIONNAIRE=".$_GET['NomQuestionnaire']."&THEMEQUESTIONNAIRE=".$_GET['ThemeQuestionnaire']."&NOMBREQUESTION=".$_GET['NombreQuestion']."");                    exit;
+                  header("Location:  ../../view/addQuestions.php?IDQUESTIONNAIRE=".$row["IDQUESTIONNAIRE"]."&NOMQUESTIONNAIRE=".$_GET['NomQuestionnaire']."&THEMEQUESTIONNAIRE=".$_GET['ThemeQuestionnaire']."&NOMBREQUESTION=".$_GET['NombreQuestion']."");                    exit;
                 }
             } else {
                 echo "<p>Problème de Requête</p>";

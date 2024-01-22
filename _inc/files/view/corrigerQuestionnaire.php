@@ -1,3 +1,8 @@
+<?php
+    namespace files\BD;
+	use \PDO;
+	use \PDOException;
+?>
 <!doctype html>
 <html>
 <head>
@@ -11,7 +16,7 @@ Lancement d'un Questionnaire par ID
 <?php 
     session_start();
 
-    require('connexionBD.php');
+    require('../BD/connexionBD.php');
     $connexion = connect_bd();
     $wanted=$_GET['IDQUESTIONNAIRE']; 
     $score = 0;
@@ -74,7 +79,7 @@ Lancement d'un Questionnaire par ID
     $stmt->bindParam(':idQ', $_GET['IDQUESTIONNAIRE']); 
     $stmt->bindValue(':score', $score); 
     $stmt->execute();
-    header("Refresh:1; affichageQuestionnaire.php");
+    header("Location: affichageQuestionnaire.php");
     ?> 
         
     </body>

@@ -1,3 +1,6 @@
+<?php
+    namespace files\BD;
+?>
 <!doctype html>
 <html>
 <head>
@@ -8,7 +11,7 @@
 <body>
 
 <?php
-require("connexionBD.php");
+require("../BD/connexionBD.php");
 $connexion=connect_bd();
 
 
@@ -64,7 +67,7 @@ for ($i = 1; $i <= $_GET['NOMBREQUESTION']; $i++) {
 
 
 // Redirection vers la page d'affichage des questionnaires après un certain délai
-header("Refresh:1; affichageQuestionnaire.php");
+header("Location:  ../view/affichageQuestionnaire.php");
 
 ?>
 </body>

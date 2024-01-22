@@ -1,7 +1,12 @@
 <?php
+
+namespace files\BD;
+
+
 session_start();
 
-require("connexionBD.php");
+
+require("../BD/connexionBD.php");
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Rediriger vers la page de connexion en cas d'échec
-    header("Location: connexion.php");
+    header("Location: _inc/files/view/connexion.php");
     exit;
 }
 ?>
@@ -36,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/Bandeau.css">
-    <link rel="stylesheet" href="../css/Connexion.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/Bandeau.css">
+    <link rel="stylesheet" href="../../../css/Connexion.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 </head>
 <body>
      <header class="navbar navbar-expand-lg navbar-dark bg-primary">

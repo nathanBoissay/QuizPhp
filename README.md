@@ -11,7 +11,6 @@
 
 - Faites attention a bien modifier le fichier connectBD.php en mettant vos identifiants à votre base de données en suivant les différents exemples.
 - Placez vous à la racine du projet et faite **php -S localhost:8000** puis suivez le lien.
-- Ensuite modifié l'url de la page Web pour obtenir: **http://localhost:8000/templates/Connexion.html**
 
 
 #### Insertion des données de tests :arrow_down:

@@ -1,3 +1,8 @@
+<?php
+    namespace files\BD;
+    use \PDO;
+    use \PDOException;
+?>
 <!doctype html>
 <html>
   <head>
@@ -5,13 +10,13 @@
       Questionnaire
     </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/Bandeau.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/lancerQ.css">
+    <link rel="stylesheet" href="../../../css/Bandeau.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/lancerQ.css">
   </head>
   <body>
     <?php 
-      require('connexionBD.php');
+      require('../BD/connexionBD.php');
       $connexion = connect_bd();
       $wanted=$_GET['IDQUESTIONNAIRE']; 
 

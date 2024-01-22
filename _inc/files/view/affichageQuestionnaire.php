@@ -1,23 +1,26 @@
+<?php
+    namespace files\BD;
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Nos questionnaires</title>
-  <link rel="stylesheet" href="../css/Bandeau.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/AfficheQuestionnaire.css">
+  <link rel="stylesheet" href="../../../css/Bandeau.css">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/AfficheQuestionnaire.css">
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-primary">
         <h1>Nos questionnaires</h1>
     </header>
 
-    <?php
-    // Connexion à la base de données
+<?php
 
-    require("connexionBD.php");
-    $connexion=connect_bd();
 
-    // Récupération de la liste des questionnaires
+
+    require("../BD/connexionBD.php");
+    $connexion=connect_bd();    // Récupération de la liste des questionnaires
+
     $sql = "SELECT * FROM QUESTIONNAIRE";
     if(!$connexion->query($sql)) echo "Pb d'accès au Questionnaire";
     else{
@@ -44,7 +47,7 @@
                         echo "<td>".$row['NOMBREQUESTION']."</td>";
                         echo "<td><input class='btn btn-outline-success' type='submit' value='JOUER'></td>";
                         echo "<input type='hidden' name='IDQUESTIONNAIRE' value='".$row['IDQUESTIONNAIRE']."'>";
-                        echo "<td><input class='btn btn-outline-danger' formaction='deleteQuestionnaire.php' type='submit' formation value='SUPPR'></td>";
+                        echo "<td><input class='btn btn-outline-danger' formaction='../actionBD/deleteQuestionnaire.php' type='submit' formation value='SUPPR'></td>";
                         echo "</tr>";
                         echo "</form>";
                     }
@@ -56,7 +59,7 @@
             ?>
         </section>
         <section id="other">
-            <a href="addQuestionnaire.php/" class="btn btn-primary" value="Ajouter un Questionnaire">Ajouter un Questionnaire</a>
+            <a href="../actionBD/addQuestionnaire.php/" class="btn btn-primary" value="Ajouter un Questionnaire">Ajouter un Questionnaire</a>
         </section>
     </main>
 </body>

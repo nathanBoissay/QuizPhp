@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
   <title>Ajouter Vos Questions</title>
-  <link rel="stylesheet" href="../css/Bandeau.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/AfficheQuestionnaire.css">
+  <link rel="stylesheet" href="../../../css/Bandeau.css">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/AfficheQuestionnaire.css">
 </head>
 <body>
 <?php
@@ -12,7 +12,7 @@ $nombrequestion=$_GET['NOMBREQUESTION'];
 $id_questionnaire=$_GET['IDQUESTIONNAIRE'];
 $x=1;
 
-echo "<form name='ajout' action='/addQuestionBD.php?' method='GET'>";
+echo "<form name='ajout' action=../actionBD/addQuestionBD.php?' method='GET'>";
 while($x<=$nombrequestion){
     echo " <fieldset>";
     echo  "<legend>Nouvelle Question</legend>";

@@ -1,3 +1,8 @@
+<?php
+    namespace files\BD;
+	use \PDO;
+	use \PDOException;
+?>
 <!doctype html>
 <html>
 <head>
@@ -5,13 +10,13 @@
 Inscription d'une personne 
 </title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
 </head>
 <body>
 
 <?php
 
-require("connexionBD.php");
+require("../BD/connexionBD.php");
 // pour oracle: $dsn="oci:dbname=//serveur:1521/base
 // pour sqlite: $dsn="sqlite:/tmp/base.sqlite"
 $wanted=$_GET['IDQUESTIONNAIRE']; 
@@ -80,7 +85,7 @@ if (!empty($wanted)){
 
 
         echo "<h1>Suppression du Questionnaire effectuée avec succès</h1>";
-        header('Location: affichageQuestionnaire.php');
+        header('Location: ../view/affichageQuestionnaire.php');
     } else {
         echo "<h1>Le Questionnaire que vous essayez de supprimer n'existe pas</h1>";
        
